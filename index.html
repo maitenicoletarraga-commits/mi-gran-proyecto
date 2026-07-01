@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>ServiTec | Reparación de Electrónicos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Botón modo oscuro/claro -->
+<div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-sun sun-icon"></i>
+  <span id="themeText">Modo claro</span>
+  <i class="fas fa-moon moon-icon"></i>
+</div>
+
+<!-- Botón de ayuda (volver a mostrar tutorial) -->
+<button class="help-btn" id="helpBtn">
+  <i class="fas fa-question-circle"></i> ¿Necesitas ayuda?
+</button>
+
+<!-- Overlay del tutorial -->
+<div id="tourOverlay" class="tour-overlay"></div>
+
+<header>
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <h1>ServiTec <span>⚡ reparación experta</span></h1>
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-list">
+      <li><a href="#" data-section="inicio" class="nav-link active" id="nav-inicio">Inicio</a></li>
+      <li><a href="#" data-section="informacion" class="nav-link" id="nav-info">Información</a></li>
+      <li><a href="#" data-section="contacto" class="nav-link" id="nav-contacto">Contacto</a></li>
+      <li><a href="#" data-section="ubicacion" class="nav-link" id="nav-ubicacion">Ubicación</a></li>
+      <li><a href="#" data-section="reservas" class="nav-link" id="nav-reservas">Reservas</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- SECCION INICIO -->
+  <section id="inicio" class="section active-section">
+    <div class="hero-grid">
+      <div class="hero-text" id="hero-section">
+        <h2>Reparaciones electrónicas <br> con garantía y rapidez</h2>
+        <p>En ServiTec devolvemos la vida a tus dispositivos: televisores, laptops, consolas, equipos de audio y más. Más de 5 años de experiencia, repuestos originales y servicio express.</p>
+        <button class="btn-primary" id="btnReservarDesdeInicio">📅 Reserva tu cita ahora</button>
+        <div style="margin-top: 1.2rem;">
+          <a href="https://wa.me/59162305564?text=Hola%20ServiTec%2C%20necesito%20reparar%20mi%20equipo" target="_blank" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i> Escríbenos al 62305564
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/600x400/eef2ff/2563eb?text=ServiTec+Reparaciones&font=poppins" alt="Taller de reparación electrónica">
+      </div>
+    </div>
+    <div style="margin-top: 3rem;" id="services-section">
+      <h3 class="section-title">📺 Nuestros servicios estrella</h3>
+      <div class="services-list">
+        <div class="service-card"><i class="fas fa-tv"></i><h3>Televisores</h3><p>LCD, LED, OLED, Smart TV.</p></div>
+        <div class="service-card"><i class="fas fa-laptop"></i><h3>Laptops / PC</h3><p>Mantenimiento, SSD, teclados.</p></div>
+        <div class="service-card"><i class="fas fa-tablet-alt"></i><h3>Tablets</h3><p>Reparación de módulos.</p></div>
+        <div class="service-card"><i class="fas fa-gamepad"></i><h3>Consolas</h3><p>PlayStation, Xbox, Nintendo.</p></div>
+        <div class="service-card"><i class="fas fa-headphones"></i><h3>Audio & Radios</h3><p>Equipos de sonido, radios.</p></div>
+        <div class="service-card"><i class="fas fa-microchip"></i><h3>Electrónica gral</h3><p>Fuentes, cargadores y más.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION INFORMACION -->
+  <section id="informacion" class="section">
+    <h2 class="section-title">🔧 Información técnica</h2>
+    <div class="info-grid" id="info-section">
+      <div class="info-text">
+        <span class="badge">📌 ¿Por qué elegirnos?</span>
+        <h3>Diagnóstico sin costo</h3>
+        <p>Trabajamos con componentes originales y ofrecemos garantía de 90 días en todas nuestras reparaciones.</p>
+        <h3>⚙️ Proceso profesional</h3>
+        <p>1. Recepción y diagnóstico.<br>2. Presupuesto autorizado.<br>3. Reparación.<br>4. Control de calidad y entrega.</p>
+        <h3>🕒 Horarios de atención</h3>
+        <div class="schedule-highlight">
+          <i class="far fa-clock"></i> Lunes a Viernes: 8:00 AM – 8:00 PM <br> 
+          <i class="fas fa-calendar-alt"></i> Sábados: 9:00 AM – 7:00 PM<br>
+          <i class="fas fa-ban"></i> Domingos: Cerrado
+        </div>
+      </div>
+      <div style="flex:1; background: var(--schedule-bg); border-radius: 24px; padding: 1rem; display: flex; align-items: center; justify-content: center;">
+        <i class="fas fa-microchip" style="font-size: 5rem; color:#2563eb;"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION CONTACTO -->
+  <section id="contacto" class="section">
+    <h2 class="section-title">📞 Contáctanos</h2>
+    <div class="contact-wrapper" id="contact-section">
+      <div class="form-container">
+        <h3>Escríbenos y te responderemos rápido</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="contactNameInput" placeholder="Nombre completo (solo letras)" required>
+            <span class="error-message" id="contactNameError"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="contactEmailInput" placeholder="Correo electrónico" required>
+            <span class="error-message" id="contactEmailError"></span>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="contactPhoneInput" placeholder="Teléfono / WhatsApp (solo números)" required>
+            <span class="error-message" id="contactPhoneError"></span>
+          </div>
+          <div class="form-group">
+            <textarea rows="3" id="contactMsg" placeholder="Cuéntanos qué dispositivo necesitas reparar..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar mensaje <i class="fas fa-paper-plane"></i></button>
+          <div id="formFeedback" class="success-msg"></div>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3><i class="fab fa-whatsapp"></i> Vía directa</h3>
+        <p><i class="fas fa-phone-alt"></i> Línea directa: <strong>62305564</strong></p>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/59162305564" target="_blank" class="whatsapp-link">+591 62305564</a></p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:servitec@reparaciones.com">servitec@reparaciones.com</a></p>
+        <a href="https://wa.me/59162305564?text=Hola%20quiero%20agendar%20una%20reparación" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chatear ahora</a>
+        
+        <div class="social-section">
+          <div class="social-title"><i class="fas fa-share-alt"></i> Síguenos en redes</div>
+          <div class="social-icons">
+            <a href="https://facebook.com/servitec" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/servitec" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/servitec" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://tiktok.com/@servitec" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/servitec" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <hr style="margin: 1rem 0;">
+        <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lun-Vie 8am-8pm, Sáb 9am-7pm</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION UBICACION -->
+  <section id="ubicacion" class="section">
+    <h2 class="section-title">📍 Dónde encontrarnos</h2>
+    <div class="address-card" id="location-section">
+      <i class="fas fa-map-marker-alt" style="font-size: 2rem; color:#2563eb;"></i>
+      <div>
+        <strong>📍 ServiTec Central</strong><br>
+        Satélite Norte, Santa Cruz - Warnes, Mercado Central "20 de Abril" - Puesto 12.
+      </div>
+    </div>
+    <div class="map-placeholder">
+      <i class="fas fa-map" style="font-size: 2rem; color:#64748b;"></i>
+      <p>📍 <strong>Satélite Norte / Warnes - Mercado Central 20 de Abril</strong></p>
+      <div class="map-demo">
+        <span>🗺️ [Mapa - Mercado 20 de Abril]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION RESERVAS (con HORA) -->
+  <section id="reservas" class="section">
+    <h2 class="section-title">📅 Reserva tu cita</h2>
+    <div class="booking-card" id="booking-section">
+      <h3>Agenda una revisión sin compromiso</h3>
+      <p>Selecciona fecha y hora disponible. Te confirmaremos por WhatsApp.</p>
+      <form id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="bookingName" placeholder="Nombre completo (solo letras)" required>
+            <span class="error-message" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="bookingEmail" placeholder="Correo electrónico" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="tel" id="bookingPhone" placeholder="Teléfono / WhatsApp (solo números)" required>
+            <span class="error-message" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <input type="date" id="bookingDate" required>
+            <span class="error-message" id="dateError"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <select id="bookingTime" required>
+              <option value="">Selecciona una hora</option>
+            </select>
+            <span class="error-message" id="timeError"></span>
+          </div>
+          <div class="form-group">
+            <select id="bookingService" required>
+              <option value="">Selecciona el servicio</option>
+              <option>Reparación de Televisor</option>
+              <option>Reparación de Laptop / PC</option>
+              <option>Reparación de Equipo de Audio / Radio</option>
+              <option>Reparación de Consola</option>
+              <option>Diagnóstico general</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea rows="2" id="bookingComments" placeholder="Detalles adicionales (marca, modelo, falla)"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Solicitar reserva</button>
+        <div id="bookingFeedback" class="success-msg"></div>
+      </form>
+      <div style="margin-top: 1rem; text-align:center;">
+        📲 Reserva por <a href="https://wa.me/59162305564" target="_blank" class="whatsapp-link">WhatsApp 62305564</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 ServiTec - Reparación electrónica profesional</p>
+  <p>📞 62305564 | 📍 Satélite Norte, Mercado 20 de Abril</p>
+  <div class="footer-social">
+    <a href="https://facebook.com/servitec" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/servitec" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/servitec" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://tiktok.com/@servitec" target="_blank"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+<script>
+  // Modo oscuro/claro
+  const themeToggle = document.getElementById('themeToggle');
+  const themeText = document.getElementById('themeText');
+  
+  function setTheme(isDark) {
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+      themeText.textContent = 'Modo oscuro';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      themeText.textContent = 'Modo claro';
+      localStorage.setItem('theme', 'light');
+    }
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark-mode');
+    setTheme(isDark);
+  });
+  
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    setTheme(true);
+  } else {
+    setTheme(false);
+  }
+
+  // ========== FUNCIÓN PARA GENERAR HORAS SEGÚN EL DÍA ==========
+  const bookingTimeSelect = document.getElementById('bookingTime');
+  const bookingDateInput = document.getElementById('bookingDate');
+  const timeError = document.getElementById('timeError');
+
+  function generateHoursForDate(dateValue) {
+    if (!dateValue) return;
+    
+    const selectedDate = new Date(dateValue);
+    const dayOfWeek = selectedDate.getDay(); // 0 = domingo, 1 = lunes, ..., 6 = sábado
+    
+    let hours = [];
+    
+    if (dayOfWeek === 0) {
+      // Domingo - cerrado
+      hours = [];
+      timeError.textContent = '❌ Los domingos estamos cerrados. Elige otro día.';
+    } else if (dayOfWeek === 6) {
+      // Sábado: 9:00 a 19:00 (9 AM a 7 PM)
+      for (let h = 9; h <= 19; h++) {
+        let hour12 = h > 12 ? h - 12 : h;
+        let ampm = h >= 12 ? 'PM' : 'AM';
+        if (h === 12) ampm = 'PM';
+        if (h === 0) { hour12 = 12; ampm = 'AM'; }
+        hours.push(`${hour12}:00 ${ampm}`);
+        if (h !== 19) hours.push(`${hour12}:30 ${ampm}`);
+      }
+      timeError.textContent = '';
+    } else {
+      // Lunes a Viernes: 8:00 a 20:00 (8 AM a 8 PM)
+      for (let h = 8; h <= 20; h++) {
+        let hour12 = h > 12 ? h - 12 : h;
+        let ampm = h >= 12 ? 'PM' : 'AM';
+        if (h === 12) ampm = 'PM';
+        if (h === 0) { hour12 = 12; ampm = 'AM'; }
+        hours.push(`${hour12}:00 ${ampm}`);
+        if (h !== 20) hours.push(`${hour12}:30 ${ampm}`);
+      }
+      timeError.textContent = '';
+    }
+    
+    // Limpiar y llenar el select de horas
+    bookingTimeSelect.innerHTML = '<option value="">Selecciona una hora</option>';
+    hours.forEach(hour => {
+      const option = document.createElement('option');
+      option.value = hour;
+      option.textContent = hour;
+      bookingTimeSelect.appendChild(option);
+    });
+    
+    if (hours.length === 0) {
+      const option = document.createElement('option');
+      option.value = "";
+      option.textContent = "Sin horarios disponibles";
+      bookingTimeSelect.appendChild(option);
+      bookingTimeSelect.disabled = true;
+    } else {
+      bookingTimeSelect.disabled = false;
+    }
+  }
+
+  // Escuchar cambios en la fecha
+  bookingDateInput.addEventListener('change', (e) => {
+    generateHoursForDate(e.target.value);
+    validateDate();
+  });
+
+  // Validación de fecha (no puede ser anterior a hoy)
+  function validateDate() {
+    const date = bookingDateInput.value;
+    if (date === '') {
+      document.getElementById('dateError').textContent = '';
+      return true;
+    }
+    const today = new Date().toISOString().split('T')[0];
+    if (date < today) {
+      document.getElementById('dateError').textContent = '❌ La fecha no puede ser anterior a hoy';
+      bookingDateInput.classList.add('error-input');
+      return false;
+    } else {
+      document.getElementById('dateError').textContent = '';
+      bookingDateInput.classList.remove('error-input');
+      return true;
+    }
+  }
+
+  // ========== TUTORIAL INTERACTIVO ==========
+  let tourStep = 0;
+  let currentCard = null;
+  
+  const tourSteps = [
+    { elementId: 'nav-inicio', title: '🌟 ¡Bienvenido a ServiTec!', message: 'Aquí estás en la página de INICIO. Puedes ver todos nuestros servicios y promociones.', position: 'bottom' },
+    { elementId: 'nav-info', title: '📋 Información técnica', message: 'En esta sección encontrarás nuestros horarios, proceso de reparación y por qué elegirnos.', position: 'bottom' },
+    { elementId: 'nav-contacto', title: '📞 Contacto', message: 'Aquí puedes escribirnos un mensaje o contactarnos por WhatsApp al 62305564.', position: 'bottom' },
+    { elementId: 'nav-ubicacion', title: '📍 Ubicación', message: 'Encontranos en Satélite Norte, Mercado Central 20 de Abril, Santa Cruz.', position: 'bottom' },
+    { elementId: 'nav-reservas', title: '📅 Reservas', message: '¡Lo más importante! Agenda tu cita aquí seleccionando fecha y hora disponible.', position: 'bottom' },
+    { elementId: 'btnReservarDesdeInicio', title: '⚡ Atajo rápido', message: 'También puedes reservar directo desde este botón en la página de inicio.', position: 'top' }
+  ];
+  
+  function getElementPosition(el) {
+    const rect = el.getBoundingClientRect();
+    return { top: rect.top + window.scrollY, left: rect.left + window.scrollX, width: rect.width, height: rect.height };
+  }
+  
+  function showTourStep(step) {
+    if (currentCard) currentCard.remove();
+    if (step >= tourSteps.length) { endTour(); return; }
+    
+    const stepData = tourSteps[step];
+    const element = document.getElementById(stepData.elementId);
+    if (!element) { tourStep++; showTourStep(tourStep); return; }
+    
+    const pos = getElementPosition(element);
+    document.getElementById('tourOverlay').style.display = 'block';
+    
+    const card = document.createElement('div');
+    card.className = 'tour-card';
+    let topPos = stepData.position === 'bottom' ? pos.top + pos.height + 15 : pos.top - 130;
+    let leftPos = pos.left + pos.width / 2 - 140;
+    if (leftPos < 10) leftPos = 10;
+    if (leftPos > window.innerWidth - 290) leftPos = window.innerWidth - 290;
+    if (topPos < 10) topPos = 10;
+    
+    card.style.top = topPos + 'px';
+    card.style.left = leftPos + 'px';
+    card.innerHTML = `<h4><i class="fas fa-compass"></i> ${stepData.title}</h4><p>${stepData.message}</p><button id="tourNextBtn">Siguiente <i class="fas fa-arrow-right"></i></button><button id="tourSkipBtn" class="skip-btn">Saltar tutorial</button>`;
+    document.body.appendChild(card);
+    currentCard = card;
+    
+    document.getElementById('tourNextBtn').onclick = () => { tourStep++; showTourStep(tourStep); };
+    document.getElementById('tourSkipBtn').onclick = () => endTour();
+  }
+  
+  function endTour() {
+    document.getElementById('tourOverlay').style.display = 'none';
+    if (currentCard) currentCard.remove();
+    localStorage.setItem('tourCompleted', 'true');
+  }
+  
+  if (!localStorage.getItem('tourCompleted')) setTimeout(() => { showTourStep(0); }, 500);
+  document.getElementById('helpBtn').onclick = () => { endTour(); setTimeout(() => { showTourStep(0); }, 200); };
+
+  // ========== VALIDACIONES ==========
+  function validateNameInput(input, errorSpan, regex) {
+    const val = input.value.trim();
+    if (val === '') { errorSpan.textContent = ''; return true; }
+    if (!regex.test(val)) { errorSpan.textContent = '❌ Formato incorrecto'; input.classList.add('error-input'); return false; }
+    errorSpan.textContent = ''; input.classList.remove('error-input'); return true;
+  }
+  
+  const nameRegex = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]*$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[\+]?[0-9\s]*$/;
+  
+  const cName = document.getElementById('contactNameInput'), cEmail = document.getElementById('contactEmailInput'), cPhone = document.getElementById('contactPhoneInput');
+  const bName = document.getElementById('bookingName'), bEmail = document.getElementById('bookingEmail'), bPhone = document.getElementById('bookingPhone'), bDate = document.getElementById('bookingDate');
+  
+  [cName, bName].forEach(inp => inp?.addEventListener('input', () => validateNameInput(inp, document.getElementById(inp.id === 'contactNameInput' ? 'contactNameError' : 'nameError'), nameRegex)));
+  [cEmail, bEmail].forEach(inp => inp?.addEventListener('input', () => validateNameInput(inp, document.getElementById(inp.id === 'contactEmailInput' ? 'contactEmailError' : 'emailError'), emailRegex)));
+  [cPhone, bPhone].forEach(inp => inp?.addEventListener('input', () => validateNameInput(inp, document.getElementById(inp.id === 'contactPhoneInput' ? 'contactPhoneError' : 'phoneError'), phoneRegex)));
+  
+  bDate?.addEventListener('change', validateDate);
+
+  // Navegación
+  const sections = ['inicio', 'informacion', 'contacto', 'ubicacion', 'reservas'];
+  const secElements = {
+    inicio: document.getElementById('inicio'), informacion: document.getElementById('informacion'),
+    contacto: document.getElementById('contacto'), ubicacion: document.getElementById('ubicacion'), reservas: document.getElementById('reservas')
+  };
+  
+  function activateSection(id) {
+    sections.forEach(s => secElements[s]?.classList.remove('active-section'));
+    secElements[id]?.classList.add('active-section');
+    document.querySelectorAll('.nav-link').forEach(l => {
+      if (l.dataset.section === id) l.classList.add('active');
+      else l.classList.remove('active');
+    });
+    document.getElementById('nav-list')?.classList.remove('show');
+  }
+  
+  document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', e => { e.preventDefault(); activateSection(l.dataset.section); }));
+  document.getElementById('btnReservarDesdeInicio')?.addEventListener('click', () => { activateSection('reservas'); document.getElementById('reservas').scrollIntoView({ behavior: 'smooth' }); });
+  document.getElementById('mobile-menu')?.addEventListener('click', () => document.getElementById('nav-list')?.classList.toggle('show'));
+  
+  // Envío de formulario de contacto
+  document.getElementById('contactForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    if (cName.value.trim() && cEmail.value.trim() && cPhone.value.trim() && nameRegex.test(cName.value.trim()) && emailRegex.test(cEmail.value.trim()) && phoneRegex.test(cPhone.value.trim())) {
+      document.getElementById('formFeedback').innerHTML = '✅ Mensaje enviado, te responderemos al 62305564.';
+      e.target.reset();
+      setTimeout(() => document.getElementById('formFeedback').innerHTML = '', 3000);
+    } else {
+      document.getElementById('formFeedback').innerHTML = '❌ Corrige los errores antes de enviar';
+      setTimeout(() => document.getElementById('formFeedback').innerHTML = '', 3000);
+    }
+  });
+  
+  // Envío de reservas con validación de hora
+  document.getElementById('bookingForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = bName.value.trim();
+    const date = bDate.value;
+    const time = bookingTimeSelect.value;
+    const service = document.getElementById('bookingService').value;
+    
+    if (!name) { nameError.textContent = '❌ El nombre es obligatorio'; bName.classList.add('error-input'); }
+    if (!date) { document.getElementById('dateError').textContent = '❌ La fecha es obligatoria'; bDate.classList.add('error-input'); }
+    if (!time) { timeError.textContent = '❌ Selecciona una hora disponible'; bookingTimeSelect.classList.add('error-input'); }
+    
+    if (name && date && time && service && nameRegex.test(name) && emailRegex.test(bEmail.value.trim()) && phoneRegex.test(bPhone.value.trim()) && date >= new Date().toISOString().split('T')[0]) {
+      document.getElementById('bookingFeedback').innerHTML = `🎉 ¡Reserva solicitada, ${name}! Te confirmaremos por WhatsApp al 62305564 para el ${date} a las ${time}. ¡Gracias!`;
+      document.getElementById('bookingFeedback').style.color = '#16a34a';
+      e.target.reset();
+      bookingTimeSelect.innerHTML = '<option value="">Selecciona una hora</option>';
+      setTimeout(() => document.getElementById('bookingFeedback').innerHTML = '', 5000);
+    } else {
+      document.getElementById('bookingFeedback').innerHTML = '❌ Por favor corrige los errores antes de enviar';
+      document.getElementById('bookingFeedback').style.color = '#dc2626';
+      setTimeout(() => document.getElementById('bookingFeedback').innerHTML = '', 3000);
+    }
+  });
+  
+  activateSection('inicio');
+</script>
+</body>
+</html>
